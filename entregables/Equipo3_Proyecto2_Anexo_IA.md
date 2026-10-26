@@ -1,6 +1,6 @@
 ---
 title: "Anexo — Uso de inteligencia artificial"
-subtitle: "Proyecto 2 · Visualización de Datos con Python"
+subtitle: "Equipo 3 · Proyecto 2 · Visualización de Datos con Python"
 ---
 
 # Herramientas y propósito

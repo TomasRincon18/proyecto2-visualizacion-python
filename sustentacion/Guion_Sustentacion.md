@@ -25,13 +25,14 @@ Integrantes: Juan Tomás Rincón · Alejandro Pardo Costo
 ### ▸ 1:00–2:00 — Fuente, variables y transformaciones
 **Pantalla:** Sección 1 (outputs visibles).
 
-- Fuente única: "`WHR24_Data_Figure_2.1.xls`, archivo oficial. 143 países,
-  promedios 2021–2023, escala 0–10."
+- Fuente única: "`WHR24_Data_Figure_2.1.xls`, archivo oficial. 143 países; cada
+  valor resume las encuestas 2021–2023 como lo publica el WHR 2024; escala 0–10."
 - **Integridad verificada**: "contribuciones + residuo = evaluación de vida;
   diferencia máxima 0.00005" → señalizar el ✓.
-- Regiones: "el archivo oficial **no trae región**; usamos la taxonomía oficial
-  del WHR desde archivos oficiales, solo como atributo de país — ningún dato de
-  bienestar de otro año entra" (143/143 con homologación de 5 nombres).
+- Regiones: "el archivo oficial **no trae región**; nosotros asignamos cada país a
+  una de las 10 regiones del WHR en el propio código y lo validamos con los conteos
+  por región que publica el WHR 2024 (tabla 18 del apéndice). No usamos ningún otro
+  archivo de datos" (143/143, los 10 conteos coinciden).
 - Faltantes: "3 países sin contribuciones — sin imputar; conservados donde su
   dato existe y excluidos de composición (140/143)."
 - Nota si preguntan de medianas/medias: **mediana** para nivel (robusta),
@@ -92,9 +93,11 @@ Integrantes: Juan Tomás Rincón · Alejandro Pardo Costo
    "composición", no de niveles materiales.
 
 2. **¿De dónde salen las regiones si el archivo no las trae?**
-   → De la taxonomía oficial del WHR (archivos oficiales WHR21/WHR20 usados
-   *únicamente* como atributo de país; ningún dato de bienestar de otros años).
-   Está generado por script reproducible y documentado en el notebook.
+   → Las asignamos nosotros en el notebook (diccionario región → países, con los
+   nombres del archivo 2024), usando las 10 regiones con que el WHR 2024 presenta
+   sus resultados. El notebook comprueba que los 143 países tengan una sola región y
+   que los conteos coincidan con la tabla 18 del Statistical Appendix 2024; si no,
+   se detiene. Es una variable categórica, no un dato de bienestar.
 
 3. **¿Cómo verifican la integridad de los datos?**
    → Suma de las 6 contribuciones + Dystopia/residuo = evaluación de vida, con

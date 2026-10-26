@@ -181,7 +181,7 @@ fig_pais.show()
 # %% [markdown]
 # ### Gráfico 6 — Países líderes y rezagados por indicador
 #
-# **¿Qué necesita examinar el analista?** Qué países concretos encabizan y
+# **¿Qué necesita examinar el analista?** Qué países concretos encabezan y
 # cierran cada indicador, y cómo cambia ese orden al cambiar de indicador.
 #
 # **Qué aporta la interactividad:** el desplegable cambia el indicador (siete
@@ -289,6 +289,6 @@ html_total = (
     f"<section>{html_pais}</section>\n<section>{html_rank}</section>\n"
     "</body>\n</html>\n"
 )
-salida = ENTREGABLES / "Proyecto2_Graficos_Interactivos.html"
+salida = ENTREGABLES / "Equipo3_Proyecto2_Graficos_Interactivos.html"
 salida.write_text(html_total, encoding="utf-8")
 print(f"HTML guardado: {salida} ({salida.stat().st_size / 1e6:.1f} MB)")

@@ -1,7 +1,7 @@
 ---
 title: "Bienestar por regiones: una mirada al World Happiness Report 2024"
 subtitle: "Informe técnico — Proyecto 2 · Visualización de Datos con Python"
-authors: "Juan Tomás Rincón · Alejandro Pardo Costo"
+authors: "Equipo 3 · Juan Tomás Rincón · Alejandro Pardo Costo"
 date: "Octubre 2026"
 ---
 
@@ -16,10 +16,10 @@ date: "Octubre 2026"
 | Elemento | Descripción |
 |---|---|
 | Fuente | `WHR24_Data_Figure_2.1.xls` — World Happiness Report 2024 (archivo oficial, *Data for Figure 2.1*) |
-| Cobertura | 143 países; promedios trianuales **2021–2023**; escala Cantril de evaluación de vida **0–10** |
+| Cobertura | 143 países. Cada valor del WHR 2024 resume en un solo dato por país las encuestas Gallup de **2021, 2022 y 2023** (así lo publica el archivo oficial); escala Cantril **0–10** |
 | Variables | Evaluación de vida + intervalo de confianza del 95%; contribuciones de 6 factores (PIB, apoyo social, esperanza de vida, libertad, generosidad, corrupción) y bloque *Dystopia + residuo* — todas en puntos de escalera |
-| Región | Taxonomía oficial de 10 regiones del WHR (archivo WHR21/WHR20 solo como atributo de país; **ningún dato de bienestar de otros años**) |
-| Preparación | Homologación de 5 nombres de país, verificación de integridad (contribuciones + residuo = ladder ✓), 3 países sin contribuciones excluidos solo de composición (Bahréin, Tayikistán, Palestina), renombrado de columnas y tabla de 143 × 14 |
+| Región | El archivo no trae la región: el equipo asignó cada país a una de las 10 regiones del WHR en el código y validó los conteos con la tabla 18 del *Statistical Appendix* 2024. **Único archivo de datos: el oficial** |
+| Preparación | Verificación de integridad (contribuciones + residuo = ladder ✓), 3 países sin contribuciones excluidos solo de composición (Bahréin, Tayikistán, Palestina), renombrado de columnas y tabla de 143 × 14 |
 
 **Nota inferencial.** Las contribuciones son componentes del modelo del WHR (relación parte–todo con la evaluación). Todas las relaciones mostradas son **asociaciones descriptivas, no causales**.
 
@@ -37,7 +37,7 @@ date: "Octubre 2026"
 
 **Respuesta a la pregunta.** Las regiones difieren en *cuánto* valora su población su vida (hasta 3 puntos), en *de qué* se componen esas valoraciones y en *cuánta diversidad interna* ocultan (rangos de 0.33 a 4.63). Comparar regiones exige mirar siempre las tres cosas: nivel, composición y dispersión; descartar cualquiera de ellas lleva a lecturas parciales —el riesgo concreto es tratar un promedio regional como representativo de países que van de la mitad superior a la inferior del ranking mundial.
 
-**Limitaciones.** El archivo publica contribuciones y no indicadores crudos; 3 países carecen de contribuciones (sin imputar); las regiones tienen entre 4 y 35 países; todo se resume en el trienio 2021–2023; no se infieren causalidades y parte de la varianza (1.0–2.1 puntos) queda fuera del modelo.
+**Limitaciones.** El archivo publica contribuciones y no indicadores crudos; 3 países carecen de contribuciones (sin imputar); las regiones tienen entre 4 y 35 países; cada país tiene un solo valor (encuestas 2021–2023), sin evolución temporal; la agrupación regional fue construida por el equipo; no se infieren causalidades y parte de la varianza (1.0–2.1 puntos) queda fuera del modelo.
 
 **Nuevas preguntas.** ¿Qué explica el bloque no asignado?, ¿se sostienen los patrones en la serie 2012–2023?, ¿cómo cambia la comparación con datos individuales por edad y género?
 
