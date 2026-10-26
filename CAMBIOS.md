@@ -44,7 +44,21 @@ La instrucción no permite "datos de otros años", y usábamos WHR20 y WHR21 par
   `notebook/Proyecto2_Analisis.py`): el notebook es la única fuente. Quedan `04_plotly.py`
   (lo usa la presentación), `06_pdf.py` y `07_presentacion.py`.
 
+## 5. Carpeta `entregables/` = lo que pide la sección 7
+```
+entregables/
+├── Equipo3_Proyecto2_Analisis.ipynb            (1) notebook ejecutado
+├── Equipo3_Proyecto2_Graficos_Interactivos.html (2) HTML de Plotly
+├── Equipo3_Proyecto2_Informe.pdf               (3) PDF ≤ 3 páginas
+├── Equipo3_Proyecto2_Datos/WHR24_Data_Figure_2.1.xls  (4) archivo original
+├── Equipo3_Proyecto2_Anexo_IA.pdf              (5) anexo de IA ≤ 1 página
+└── Complementarios/Equipo3_Proyecto2_Presentacion.html  (apoyo, no obligatorio)
+```
+Los Markdown y CSS de origen de los PDF se movieron a `recursos/fuentes_pdf/`.
+El notebook de trabajo sigue en `notebook/`; después de ejecutarlo se copia a `entregables/`.
+
 ## Cómo regenerar todo
 1. Ejecutar el notebook completo (genera `datos/WHR24_preparado.csv`, las figuras y el HTML de Plotly).
-2. `python scripts/07_presentacion.py` → presentación.
+2. `python scripts/07_presentacion.py` → presentación (en `entregables/Complementarios/`).
 3. `python scripts/06_pdf.py` → informe y anexo en PDF.
+4. Copiar `notebook/Equipo3_Proyecto2_Analisis.ipynb` y `datos/WHR24_Data_Figure_2.1.xls` a `entregables/`.

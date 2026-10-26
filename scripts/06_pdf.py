@@ -14,8 +14,9 @@ import pypandoc
 import pymupdf  # para verificar el número de páginas
 
 BASE = next(c for c in [Path("."), Path(".."), Path("Proyecto2")]
-            if (c / "entregables" / "Equipo3_Proyecto2_Informe.md").exists())
-ENT = BASE / "entregables"
+            if (c / "recursos" / "fuentes_pdf" / "Equipo3_Proyecto2_Informe.md").exists())
+ENT = BASE / "entregables"                 # PDFs entregables
+SRC = BASE / "recursos" / "fuentes_pdf"    # Markdown y CSS de origen
 
 
 def md_a_pdf(md: Path, pdf: Path, css: Path) -> int:
@@ -27,18 +28,18 @@ def md_a_pdf(md: Path, pdf: Path, css: Path) -> int:
     )
     import subprocess
     subprocess.run(
-        [str(Path(sys.executable).parent / "weasyprint"), str(html.name), str(pdf.name)],
-        check=True, cwd=ENT, capture_output=True,
+        [str(Path(sys.executable).parent / "weasyprint"), str(html.name), str(pdf.resolve())],
+        check=True, cwd=SRC, capture_output=True,
     )
     n_paginas = len(pymupdf.open(pdf))
     html.unlink()  # el HTML intermedio no es entregable
     return n_paginas
 
 
-informe = md_a_pdf(ENT / "Equipo3_Proyecto2_Informe.md", ENT / "Equipo3_Proyecto2_Informe.pdf", ENT / "informe.css")
+informe = md_a_pdf(SRC / "Equipo3_Proyecto2_Informe.md", ENT / "Equipo3_Proyecto2_Informe.pdf", SRC / "informe.css")
 print(f"Equipo3_Proyecto2_Informe.pdf → {informe} páginas (máx. 3)")
 assert informe <= 3, f"El informe excede las 3 páginas: {informe}"
 
-anexo = md_a_pdf(ENT / "Equipo3_Proyecto2_Anexo_IA.md", ENT / "Equipo3_Proyecto2_Anexo_IA.pdf", ENT / "anexo.css")
+anexo = md_a_pdf(SRC / "Equipo3_Proyecto2_Anexo_IA.md", ENT / "Equipo3_Proyecto2_Anexo_IA.pdf", SRC / "anexo.css")
 print(f"Equipo3_Proyecto2_Anexo_IA.pdf → {anexo} página(s) (máx. 1)")
 assert anexo <= 1, f"El anexo excede 1 página: {anexo}"

@@ -47,13 +47,13 @@ date: "Octubre 2026"
 
 ```{=html}
 <div style="display:flex; gap:10px; margin:8px 0; page-break-inside: avoid;">
-<div style="flex:1"><img src="../recursos/figuras/fig1_barras_evaluacion_por_region.png" style="width:100%"/></div>
-<div style="flex:1"><img src="../recursos/figuras/fig3_strip_paises_por_region.png" style="width:100%"/></div>
+<div style="flex:1"><img src="../figuras/fig1_barras_evaluacion_por_region.png" style="width:100%"/></div>
+<div style="flex:1"><img src="../figuras/fig3_strip_paises_por_region.png" style="width:100%"/></div>
 </div>
 ```
 
 **Composición.** Cada barra es la evaluación media de la región, compuesta por la aportación media de cada factor (azules) y el bloque no explicado (gris): PIB y apoyo social dominan en todas; el residuo gris es comparable a varios indicadores juntos.
 
-<img src="../recursos/figuras/fig2_composicion_por_region.png" style="width:96%; display:block; margin:6px auto; page-break-inside: avoid;"/>
+<img src="../figuras/fig2_composicion_por_region.png" style="width:96%; display:block; margin:6px auto; page-break-inside: avoid;"/>
 
 **Exploración interactiva.** El notebook y el archivo HTML entregados permiten cambiar el indicador del scatter (6 relaciones con su ajuste), filtrar por región y consultar rankings de países líderes/rezagados por los 7 indicadores.

@@ -1,7 +1,7 @@
 # %% [markdown]
 # # Generación de la presentación web del proyecto
 #
-# Construye `entregables/Proyecto2_Presentacion.html`: página profesional de
+# Construye `entregables/Complementarios/Equipo3_Proyecto2_Presentacion.html`: página profesional de
 # scroll con narrativa, evidencias (figuras Seaborn embebidas en base64) y los
 # **dos gráficos Plotly interactivos en vivo**, 100% sin internet (plotly.js,
 # figuras y datos van dentro del archivo).
@@ -768,7 +768,8 @@ huerfanos = [p for p in MIS_PLACEHOLDERS if p in html]
 assert not huerfanos, f"Placeholders sin resolver: {huerfanos}"
 import re as _re
 
-salida = ENT / "Equipo3_Proyecto2_Presentacion.html"
+salida = ENT / "Complementarios" / "Equipo3_Proyecto2_Presentacion.html"
+salida.parent.mkdir(exist_ok=True)
 salida.write_text(html, encoding="utf-8")
 print(f"Presentación: {salida} ({salida.stat().st_size/1e6:.1f} MB)")
 print("Secciones:", len(_re.findall(r'<section', html)), "| figuras embebidas:", len(_re.findall(r"data:image/png", html)))
