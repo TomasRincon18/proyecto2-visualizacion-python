@@ -1,0 +1,11 @@
+# Entorno virtual (se reconstruye con requirements.txt)
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
+Thumbs.db
