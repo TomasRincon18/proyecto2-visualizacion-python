@@ -44,6 +44,15 @@ La instrucción no permite "datos de otros años", y usábamos WHR20 y WHR21 par
   `notebook/Proyecto2_Analisis.py`): el notebook es la única fuente. Quedan `04_plotly.py`
   (lo usa la presentación), `06_pdf.py` y `07_presentacion.py`.
 
+## 4b. Corrección del Gráfico 5 (dispersión con menú de indicador)
+- **Antes:** al abrir se mostraban los 6 indicadores a la vez (6 líneas punteadas y 840 puntos
+  encimados con ejes distintos), porque las trazas no tenían `visible` inicial. Al elegir un indicador
+  la leyenda desaparecía (solo las trazas del primer indicador tenían `showlegend`) y el `legendgroup`
+  compartido hacía que al filtrar una región se ocultaran también sus países en los otros indicadores;
+  el eje conservaba el rango anterior.
+- **Ahora:** se abre solo con PIB per cápita; cada opción muestra 1 recta, 140 países y la leyenda de
+  10 regiones, y el eje se reajusta (`xaxis.autorange`). Probado en Chromium con las 6 opciones.
+
 ## 5. Carpeta `entregables/` = lo que pide la sección 7
 ```
 entregables/

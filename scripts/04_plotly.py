@@ -111,7 +111,7 @@ for i, ind in enumerate(CONTRIB_ORDER):
         traces.append(go.Scatter(
             x=sub[ind], y=sub["evaluacion_vida"], text=sub["pais"],
             mode="markers", name=reg,
-            legendgroup=reg, showlegend=(i == 0),
+            visible=(i == 0),           # al abrir solo se ve el primer indicador
             marker=dict(color=PALETA_REGIONES[region_original], size=9,
                         line=dict(width=0.5, color="white")),
             hovertemplate="<b>%{text}</b><br>Contribución: %{x:.2f} pts"
@@ -121,6 +121,7 @@ for i, ind in enumerate(CONTRIB_ORDER):
         x=[x_min, x_max],
         y=[pendiente * x_min + ordenada, pendiente * x_max + ordenada],
         mode="lines", name="Ajuste lineal global", showlegend=False,
+        visible=(i == 0),
         line=dict(color=TEXTO, width=2, dash="dash"),
         hovertemplate=f"Ajuste lineal global (r = {r_global:.2f})<extra></extra>",
     ))
@@ -135,7 +136,8 @@ for i, ind in enumerate(CONTRIB_ORDER):
     botones.append(dict(
         label=NOMBRE_CONTRIB[ind], method="update",
         args=[{"visible": vis},
-              {"xaxis.title.text": f"{NOMBRE_CONTRIB[ind]} (puntos)"}],
+              {"xaxis.title.text": f"{NOMBRE_CONTRIB[ind]} (puntos)",
+               "xaxis.autorange": True, "yaxis.autorange": True}],
     ))
 
 fig_pais = go.Figure(data=traces, layout=dict(
