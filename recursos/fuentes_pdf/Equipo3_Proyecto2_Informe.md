@@ -25,9 +25,9 @@ date: "Octubre 2026"
 
 # Principales hallazgos
 
-**1. El nivel difiere entre regiones…** Las medianas van de **6.96** (Norteamérica y ANZ) a **3.98** (Asia Meridional): casi 3 puntos en una escala de 10, con la mediana global en 5.79 y solo tres regiones por encima.
+**1. El nivel difiere entre regiones…** Las medianas van de **6.96** (Norteamérica y ANZ) a **3.98** (Asia Meridional): casi 3 puntos en una escala de 10, con la mediana global en 5.79: seis regiones por encima y cuatro por debajo.
 
-**2. …y también se diferencia la composición.** En todas las regiones PIB y apoyo social son los bloques más grandes; generosidad y corrupción aportan menos de 0.6 puntos juntos. **MENA tiene la menor contribución de libertad de la tabla (0.49)**. Entre **1.0 y 2.1 puntos** de cada región quedan fuera de los seis factores (*Dystopia + residuo*).
+**2. …y también se diferencia la composición.** En todas las regiones PIB y apoyo social son los bloques más grandes; generosidad y corrupción aportan menos de 0.6 puntos juntos. **MENA tiene la menor contribución de libertad de la tabla (0.49)**. El bloque *Dystopia + residuo* incluye una base fija de 1.58 (Distopía); descontada, el residuo medio va de **−0.57** (Asia Meridional) a **+0.48** (Latinoamérica y Caribe, que evalúa su vida mejor de lo que predicen sus seis factores).
 
 **3. La variación interna es tan relevante como la diferencia entre regiones.** El rango de países dentro de una región va de **0.33** (Norteamérica y ANZ) a **4.63** (MENA: de Líbano 2.71 a Israel 7.34); Asia Meridional, 3.44 (de Afganistán 1.72 a Nepal 5.16). **El promedio regional resume bien a las regiones homogéneas y engaña en las heterogéneas.**
 
@@ -37,7 +37,7 @@ date: "Octubre 2026"
 
 **Respuesta a la pregunta.** Las regiones difieren en *cuánto* valora su población su vida (hasta 3 puntos), en *de qué* se componen esas valoraciones y en *cuánta diversidad interna* ocultan (rangos de 0.33 a 4.63). Comparar regiones exige mirar siempre las tres cosas: nivel, composición y dispersión; descartar cualquiera de ellas lleva a lecturas parciales —el riesgo concreto es tratar un promedio regional como representativo de países que van de la mitad superior a la inferior del ranking mundial.
 
-**Limitaciones.** El archivo publica contribuciones y no indicadores crudos; 3 países carecen de contribuciones (sin imputar); las regiones tienen entre 4 y 35 países; cada país tiene un solo valor (encuestas 2021–2023), sin evolución temporal; la agrupación regional fue construida por el equipo; no se infieren causalidades y parte de la varianza (1.0–2.1 puntos) queda fuera del modelo.
+**Limitaciones.** El archivo publica contribuciones y no indicadores crudos; 3 países carecen de contribuciones (sin imputar); las regiones tienen entre 4 y 35 países; cada país tiene un solo valor (encuestas 2021–2023), sin evolución temporal; la agrupación regional fue construida por el equipo; no se infieren causalidades y el modelo deja un residuo regional de −0.57 a +0.48 puntos.
 
 **Nuevas preguntas.** ¿Qué explica el bloque no asignado?, ¿se sostienen los patrones en la serie 2012–2023?, ¿cómo cambia la comparación con datos individuales por edad y género?
 
@@ -52,7 +52,7 @@ date: "Octubre 2026"
 </div>
 ```
 
-**Composición.** Cada barra es la evaluación media de la región, compuesta por la aportación media de cada factor (azules) y el bloque no explicado (gris): PIB y apoyo social dominan en todas; el residuo gris es comparable a varios indicadores juntos.
+**Composición.** Cada barra es la evaluación media de la región, compuesta por la aportación media de cada factor (azules) y el bloque gris (base de Distopía, 1.58, más el residuo): PIB y apoyo social dominan en todas.
 
 <img src="../figuras/fig2_composicion_por_region.png" style="width:96%; display:block; margin:6px auto; page-break-inside: avoid;"/>
 

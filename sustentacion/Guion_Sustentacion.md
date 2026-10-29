@@ -44,9 +44,9 @@ Integrantes: Juan Tomás Rincón · Alejandro Pardo Costo
 | Gráfico | Qué decir (1 idea + 1 cifra + conexión con la pregunta) |
 |---|---|
 | **G1 — Barras de mediana** | "Diferencia **entre** regiones: de 6.96 a 3.98, casi 3 puntos en una escala de 10; mediana global 5.79. Es la comparación directa." |
-| **G2 — Composición apilada** | "No solo difieren en nivel: difieren en **cómo se componen**. PIB y apoyo social dominan en todas; MENA tiene la menor aportación de libertad (0.49); y **entre 1.0 y 2.1 puntos no los explican los seis factores** (bloque gris)." |
+| **G2 — Composición apilada** | "No solo difieren en nivel: difieren en **cómo se componen**. PIB y apoyo social dominan en todas; MENA tiene la menor aportación de libertad (0.49); y el bloque gris es la base de Distopía (1.58) más el residuo: descontada la base, **Latinoamérica evalúa su vida 0.48 puntos mejor de lo que predicen sus factores y Asia Meridional 0.57 peor**." |
 | **G3 — Strip de países** | "Aquí está la segunda mitad de la pregunta: **dentro** de cada región. MENA va de Líbano (2.71) a Israel (7.34): 4.63 puntos — del penúltimo al quinto del ranking. Norteamérica/ANZ apenas 0.33. El promedio regional representa a unas y engaña a otras." |
-| **G4 — Scatter apoyo social** | "¿Se sostiene la relación? Entre todos los países r = 0.81, pero **dentro** de cada región va de 0.83 a 0.14. Cautela: es asociación, no causalidad, y hay vínculo parte-todo." |
+| **G4 — Scatter apoyo social** | "¿Se sostiene la relación? Entre todos los países r = 0.81, pero **dentro** de cada región va de 0.83 a 0.14 (las regiones con 4 y 6 países dan r inestables). Cautela: es asociación, no causalidad, y hay vínculo parte-todo." |
 
 ### ▸ 5:00–8:00 — Plotly: interacción en vivo (¡el momento clave!)
 **Pantalla:** Gráficos 5 y 6. **Interactuar de verdad**, sin miedo:

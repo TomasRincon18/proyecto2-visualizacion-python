@@ -372,8 +372,8 @@ BODY = """
         <span class="kick">Evidencia 1 · Nivel</span>
         <h2>¿Cuánto difieren las regiones?</h2>
         <p>Las medianas van de <b>6.96</b> (Norteamérica y ANZ) a <b>3.98</b> (Asia Meridional):
-        casi <b>3 puntos en una escala de 10</b>. Solo tres regiones superan la mediana global
-        de 5.79; las tres últimas quedan claramente por debajo.</p>
+        casi <b>3 puntos en una escala de 10</b>. Seis regiones superan la mediana global
+        de 5.79; las tres últimas (MENA, África Subsahariana y Asia Meridional) quedan claramente por debajo.</p>
         <div class="note"><b>Por qué este gráfico:</b> es la comparación directa — barras con el valor
         exacto, sin formas que exijan explicación previa.</div>
       </div>
@@ -392,9 +392,9 @@ BODY = """
         <p>En <b>todas</b> las regiones el PIB y el apoyo social son los bloques más grandes;
         generosidad y corrupción aportan menos de 0.6 puntos juntos. <b>Oriente Medio y Norte de
         África tiene la menor contribución de libertad de toda la tabla (0.49)</b>.</p>
-        <div class="note"><b>Hallazgo de modelo:</b> entre <b>1.0 y 2.1 puntos</b> de cada barra
-        (bloque gris) quedan <b>fuera de los seis indicadores</b> — el residuo es comparable a
-        varios factores juntos.</div>
+        <div class="note"><b>Bloque gris:</b> incluye la base de Distopía (1.58, igual en todos los
+        países) más el residuo. Descontada la base, el modelo subestima a <b>Latinoamérica y
+        Caribe (+0.48)</b> y sobreestima a <b>Asia Meridional (−0.57)</b>.</div>
       </div>
       <div class="ev-fig">
         <figure class="figcard" data-img="__IMG2__">
@@ -443,8 +443,8 @@ BODY = """
             <div class="n">Zoom · homogénea</div>
             <h3>Norteamérica y ANZ: apenas 0.33 puntos</h3>
             <p>Sus 4 países caben en un tercio de punto (6.72–7.06). Aquí el promedio sí representa
-            a la región. <b>La variación interna no sigue el nivel</b>: no es raro que las regiones
-            más ricas sean también las más parecidas por dentro.</p>
+            a la región. <b>La variación interna no sigue el nivel</b>: Europa Occidental, también de
+            nivel alto, abarca 1.81 puntos.</p>
           </div>
         </div>
       </div>
@@ -538,8 +538,8 @@ BODY = """
         <p>puntos de rango dentro de MENA: de Líbano (2.71) a Israel (7.34)</p></div>
       <div class="find"><div class="big" data-count="0.81" data-dec="2">0</div>
         <p>correlación apoyo social–evaluación entre los 140 países; dentro de las regiones va de 0.28 a 0.83</p></div>
-      <div class="find"><div class="big" data-count="2.1" data-dec="1" data-prefix="1.0–">0</div>
-        <p>puntos de cada barra que los seis indicadores no explican (residuo)</p></div>
+      <div class="find"><div class="big" data-count="0.48" data-dec="2" data-prefix="+">0</div>
+        <p>residuo medio de Latinoamérica y Caribe: evalúa su vida mejor de lo que predicen sus seis factores (Asia Meridional: −0.57)</p></div>
     </div>
   </div>
 </section>
@@ -568,7 +568,7 @@ BODY = """
           <li>3 países sin contribuciones (sin imputar); regiones de 4 a 35 países.</li>
           <li>Ventana 2021–2023: sin evolución temporal en este análisis.</li>
           <li>Toda relación es <b>asociación, no causalidad</b>; parte del vínculo es parte–todo.</li>
-          <li>Entre 1.0 y 2.1 puntos por región quedan fuera de los seis factores.</li>
+          <li>El residuo regional va de −0.57 a +0.48 puntos (descontada la base de Distopía, 1.58).</li>
         </ul>
       </div>
     </div>

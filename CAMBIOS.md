@@ -53,6 +53,23 @@ La instrucción no permite "datos de otros años", y usábamos WHR20 y WHR21 par
 - **Ahora:** se abre solo con PIB per cápita; cada opción muestra 1 recta, 140 países y la leyenda de
   10 regiones, y el eje se reajusta (`xaxis.autorange`). Probado en Chromium con las 6 opciones.
 
+## 4c. Revisión de cifras y del residuo (para la sustentación)
+- **Residuo:** decíamos que "entre 1.0 y 2.1 puntos de cada barra no los explican los seis factores".
+  Es impreciso: la columna `Dystopia + residual` incluye una **base fija de 1.58** (Distopía, igual
+  para todos los países, según el apéndice del WHR 2024). Descontada la base, el residuo medio por
+  región va de **−0.57 (Asia Meridional)** a **+0.48 (Latinoamérica y Caribe)**: Latinoamérica evalúa
+  su vida mejor de lo que predicen sus factores. Se corrigió en notebook (estructura del archivo,
+  Gráfico 2 y su leyenda, conclusiones, limitación 6, nuevas preguntas), informe, presentación
+  (nota de la evidencia 2, cifra principal, limitaciones) y guion.
+- **"Solo tres regiones por encima de la mediana global"** era falso: son **seis** (las medianas de
+  Asia Oriental 6.02 y Asia Sudoriental 5.98 también la superan). Corregido en notebook, informe y presentación.
+- **Gráfico 2:** PIB + apoyo social va de 1.66 a 3.32 (decía 1.5–3.3); la esperanza de vida no es
+  exclusiva de Norteamérica/Europa Occidental (Asia Oriental 0.68), así que solo se mantiene lo de corrupción.
+- **Gráfico 3:** Europa Occidental no es "compacta" (abarca 1.81 puntos); las más compactas son
+  Norteamérica y ANZ (0.33), Asia Oriental (1.19) y CEI (1.32). También en el zoom de la presentación.
+- Gráfico 4 / guion: se aclara que las r de regiones con 4 y 6 países son inestables.
+- Todas las demás cifras citadas (medianas, extremos, rankings del Gráfico 6, integridad) se verificaron contra los datos.
+
 ## 5. Carpeta `entregables/` = lo que pide la sección 7
 ```
 entregables/
